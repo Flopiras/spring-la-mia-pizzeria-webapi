@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+
+	<!-- Bootstrap CSS -->
+	<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" />
+
+	<title>Dettaglio pizza</title>
+</head>
+
+<body th:object="${pizza}">
+
+	<div class="container">
+		
+		<!--home button-->
+		<a href="/" class="btn btn-secondary text-white mt-4">Torna alla Home</a>
+
+		<h3 class="my-4 text-center"> [[*{name}]]</h3>
+
+		<div class="d-flex">
+
+			<img th:src="*{urlImage}" alt="pizza" class="img-fluid" style="width: 200px;">
+
+			<div class="ms-4">
+
+				<h6>Descrizione:</h6>
+				<p> [[*{description}]]</p>
+
+				<div th:if="*{ingredients.size() > 0}">
+
+					<h5 class="mt-2">Ingredienti</h5>
+					
+					<ul>
+						<li th:each="ingredient : *{ingredients}"
+							th:object="${ingredient}">
+							[[*{title}]]
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+		<!--offers-->
+		<h3 class="text-center text-success">Offerte Speciali</h3>
+
+		<div th:if="${!pizza.getOffers.isEmpty()}">
+
+			<ul>
+				<li th:each="offer : ${pizza.getOffers}" th:object="${offer}">
+					[[*{toString}]]
+				</li>
+			</ul>
+		</div>
+
+		<div th:unless="${!pizza.getOffers.isEmpty()}">
+			<p class="text-center">Spiacenti, non ci sono offerte disponibili</p>
+		</div>
+
+		<!--buttons-->
+		<div class="d-flex justify-content-end align-items-center my-4">
+
+			<!--edit-->
+			<a th:href="@{/pizzas/edit/{id} (id=*{id})}" class="btn btn-warning text-white">Modifica</a>
+
+			<!--delete-->
+			<form class="mx-4" th:action="@{/pizzas/delete/{id} (id=*{id})}" method="POST">
+				<button class="btn btn-danger">Elimina</button>
+			</form>
+
+			<!--create offer-->
+			<a th:href="@{/pizzas/{id}/offer (id=*{id})}" class="btn btn-success text-white">Nuova offerta</a>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
