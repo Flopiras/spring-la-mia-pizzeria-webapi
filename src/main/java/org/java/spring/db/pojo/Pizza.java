@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.hibernate.validator.constraints.Length;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -34,7 +35,7 @@ public class Pizza {
 	@Column
 	private float price;
 	
-	@OneToMany(mappedBy = "pizza")
+	@OneToMany(mappedBy = "pizza", cascade = CascadeType.REMOVE)
 	private List<Offer> offers;
 	
 	@ManyToMany
