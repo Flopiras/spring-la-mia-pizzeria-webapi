@@ -24,6 +24,7 @@ public class Offer {
 	private String title;
 	
 	@ManyToOne
+	@JsonIgnore
 	private Pizza pizza;
 	
 	public Offer( ) { }
