@@ -6,6 +6,7 @@ import { onMounted, ref } from 'vue';
 import PizzaIndex from './components/PizzaIndex.vue';
 import PizzaShow from './components/PizzaShow.vue';
 import PizzaForm from './components/PizzaForm.vue';
+import AppHeader from './components/AppHeader.vue';
 
 
 // datas
@@ -55,6 +56,9 @@ onMounted(getPizzas);
 </script>
 
 <template>
+  <!-- header -->
+  <AppHeader />
+
   <div class="container">
 
     <!-- create button -->
