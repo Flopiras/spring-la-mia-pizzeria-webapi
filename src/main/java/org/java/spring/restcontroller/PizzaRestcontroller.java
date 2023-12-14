@@ -29,7 +29,7 @@ public class PizzaRestcontroller {
 	@GetMapping
 	public ResponseEntity<List<Pizza>> getIndex(@RequestParam(required = false) String q) {
 		
-		List<Pizza> pizzas =  q == null ? pizzaService.finAll() : pizzaService.findByName(q);
+		List<Pizza> pizzas = q == null ? pizzaService.finAll() : pizzaService.findByName(q);
 		
 		return new ResponseEntity<>(pizzas, HttpStatus.OK);
 	}

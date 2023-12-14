@@ -12,6 +12,8 @@ const props = defineProps({
 
 <template>
     <h1 class="my-4 text-center">Le nostre pizze</h1>
+
+    <!-- pizzas list -->
     <ul>
         <li v-for="pizza in pizzas" :key="pizza.id"> {{ pizza.name }}</li>
     </ul>
