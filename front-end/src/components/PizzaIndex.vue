@@ -16,3 +16,9 @@ const props = defineProps({
         <li v-for="pizza in pizzas" :key="pizza.id"> {{ pizza.name }}</li>
     </ul>
 </template>
+
+<style scoped>
+li {
+    list-style-type: none;
+}
+</style>
