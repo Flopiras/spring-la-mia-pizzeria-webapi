@@ -7,6 +7,7 @@ import PizzaIndex from './components/PizzaIndex.vue';
 
 // datas
 const pizzas = ref(null);
+const selectedPizza = ref(null);
 
 // functions
 const getPizzas = async () => {
@@ -14,6 +15,18 @@ const getPizzas = async () => {
   const data = await axios.get("http://localhost:8080/api/pizzas");
 
   pizzas.value = data.data;
+}
+
+const showPizza = (id) => {
+  pizzas.value.forEach((pizza) => {
+
+    if (pizza.id == id) {
+
+      selectedPizza.value = pizza;
+    }
+
+  });
+  console.log('pizza cliccata');
 }
 
 //mounted
@@ -24,7 +37,7 @@ onMounted(getPizzas);
   <div class="container">
 
     <!-- index -->
-    <pizzaIndex :pizzas="pizzas" />
+    <pizzaIndex v-if="!selectedPizza" :pizzas="pizzas" @show-pizza="showPizza" />
 
   </div>
 </template>
