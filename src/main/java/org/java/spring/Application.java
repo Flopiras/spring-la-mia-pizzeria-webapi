@@ -60,9 +60,9 @@ public class Application implements CommandLineRunner{
 		ingredientService.save(i8);
 		
 		//PIZZAS
-		pizzaService.save(new Pizza("Margherita", "mozzarella, pomodoro", "https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f, i1));
+		pizzaService.save(new Pizza("Margherita", "mozzarella, pomodoro", "https://primochef.it/wp-content/uploads/2019/08/SH_pizza_fatta_in_casa-1200x800.jpg.webp", 8.5f, i1));
 		pizzaService.save(new Pizza("Diavola", "mozzarella, pomodoro, salame piccante", "https://wips.plug.it/cips/buonissimo.org/cms/2012/05/69630013_m.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
 		pizzaService.save(new Pizza("Rustica", "pomodoro, mozzarella di bufala, peperoni, melanzane, zucchine", "https://www.fruttaweb.com/consigli/wp-content/uploads/2018/06/pizza-vegana.jpg", 8.5f));
 		pizzaService.save(new Pizza("Sbriciolata", "mozzarella, pomodoro, salsiccia, pecorino", "https://blog.giallozafferano.it/incucinaconmary/wp-content/uploads/2012/09/pizap.com10.823721832130104313479955621741.jpg", 8.5f));
 		pizzaService.save(new Pizza("Americana", "mozzarella, pomodoro, wurstel, patatine fritte", "https://i0.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2017/11/3244_Pizza.jpg?resize=895%2C616&ssl=1", 8.5f, i1, i2, i3, i4));
@@ -72,21 +72,21 @@ public class Application implements CommandLineRunner{
 		pizzaService.save(new Pizza("4 Formaggi", "mozzarella, provola, gorgonzola, parmigiano", "https://i0.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2017/06/3234_Pizza.jpg?resize=895%2C616&ssl=1", 8.5f));
 		pizzaService.save(new Pizza("Pere e gorgonzola", "mozzarella, pere, gorgonzola, noci", "https://i1.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2021/07/4750_Pizza.jpg?resize=895%2C616&ssl=1", 8.5f));
 		pizzaService.save(new Pizza("Tonno e cipolla", "mozzarella, tonno, cipolla", "https://i1.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2017/10/3245_Pizza.jpg?resize=895%2C616&ssl=1", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
-		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://it.wikipedia.org/wiki/Pizza_napoletana#/media/File:Eq_it-na_pizza-margherita_sep2005_sml.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
+		pizzaService.save(new Pizza("Campagnola", "mozzarella, pomodoro, funghi, prosciutto", "https://media-cdn.tripadvisor.com/media/photo-s/10/ed/eb/85/photo1jpg.jpg", 8.5f));
 		
 		//ROLES
 		Role roleUser = new Role("USER");
