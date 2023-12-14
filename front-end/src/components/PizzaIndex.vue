@@ -17,6 +17,10 @@ const props = defineProps({
     <ul class="list-group">
         <li v-for="pizza in pizzas" :key="pizza.id" class="list-group-item list-group-item-action">
             {{ pizza.name }}
+            <!-- button for show -->
+            <button class="btn btn btn-outline-primary btn-sm">
+                <i class="fa-solid fa-eye"></i> Vedi dettagli pizza
+            </button>
         </li>
     </ul>
 </template>
