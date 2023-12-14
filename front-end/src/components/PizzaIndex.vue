@@ -14,13 +14,11 @@ const props = defineProps({
     <h1 class="my-4 text-center">Le nostre pizze</h1>
 
     <!-- pizzas list -->
-    <ul>
-        <li v-for="pizza in pizzas" :key="pizza.id"> {{ pizza.name }}</li>
+    <ul class="list-group">
+        <li v-for="pizza in pizzas" :key="pizza.id" class="list-group-item list-group-item-action">
+            {{ pizza.name }}
+        </li>
     </ul>
 </template>
 
-<style scoped>
-li {
-    list-style-type: none;
-}
-</style>
+<style scoped></style>
