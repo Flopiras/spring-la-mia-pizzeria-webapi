@@ -31,6 +31,11 @@ const showPizza = (id) => {
   console.log('pizza cliccata');
 }
 
+const closeShow = (update) => {
+  selectedPizza.value = null;
+  if (update) getPizzas();
+};
+
 //mounted
 onMounted(getPizzas);
 </script>
@@ -42,7 +47,7 @@ onMounted(getPizzas);
     <pizzaIndex v-if="!selectedPizza" :pizzas="pizzas" @show-pizza="showPizza" />
 
     <!-- show -->
-    <pizzaShow v-if="selectedPizza" :pizza="selectedPizza" />
+    <pizzaShow v-if="selectedPizza" :pizza="selectedPizza" @close-show="closeShow" />
 
   </div>
 </template>

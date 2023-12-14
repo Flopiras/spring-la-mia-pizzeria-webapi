@@ -47,7 +47,11 @@ const updated = (newPizza) => {
 
         <!-- buttons -->
         <div class="my-4 d-flex justify-content-around">
+            <!-- edit -->
             <button @click="pizzaUpdate = true" class="btn btn-warning">Modifica</button>
+
+            <!-- back -->
+            <button @click="$emit('closeShow', myPizza != pizza)" class="btn btn-secondary">Torna alle pizze</button>
         </div>
     </div>
 
