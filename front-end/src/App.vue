@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
 
-import PizzaIndex from './components/pizzaindex.vue';
+import PizzaIndex from './components/PizzaIndex.vue';
 import PizzaShow from './components/PizzaShow.vue';
 
 

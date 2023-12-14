@@ -1,5 +1,7 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, ref } from 'vue';
+
+import PizzaForm from './PizzaForm.vue'
 
 // props
 const props = defineProps({
@@ -8,27 +10,40 @@ const props = defineProps({
         required: true
     }
 });
+
+//datas
+const pizzaUpdate = ref(false);
 </script>
 
 <template>
-    <h1 class="text-center my-4">
-        {{ pizza.name }}
-    </h1>
+    <div v-if="!pizzaUpdate">
+        <h1 class="text-center my-4">
+            {{ pizza.name }}
+        </h1>
 
-    <div class="d-flex justify-content-center align-items-start">
+        <div class="d-flex justify-content-center align-items-start">
 
-        <!-- image -->
-        <img :src="pizza.urlImage" :alt="pizza.name" class="img-fluid">
+            <!-- image -->
+            <img :src="pizza.urlImage" :alt="pizza.name" class="img-fluid">
 
-        <!-- description -->
-        <div class="ms-4">
-            <h4 class="my-0">Descrizione:</h4>
-            <p>{{ pizza.description }}</p>
+            <!-- description -->
+            <div class="ms-4">
+                <h4 class="my-0">Descrizione:</h4>
+                <p>{{ pizza.description }}</p>
 
-            <h5 class="m-0">Prezzo:</h5>
-            <p>€ {{ pizza.price }}</p>
+                <h5 class="m-0">Prezzo:</h5>
+                <p>€ {{ pizza.price }}</p>
+            </div>
+        </div>
+
+        <!-- buttons -->
+        <div class="my-4 d-flex justify-content-around">
+            <button @click="pizzaUpdate = true" class="btn btn-warning">Modifica</button>
         </div>
     </div>
+
+    <!-- form -->
+    <PizzaForm v-else @back="pizzaUpdate = false" @save="update" />
 </template>
 
 <style scoped>
