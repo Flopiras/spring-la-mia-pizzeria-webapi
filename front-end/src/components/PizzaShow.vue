@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps, ref } from 'vue';
+import axios from 'axios';
 
 import PizzaForm from './PizzaForm.vue'
 
@@ -11,6 +12,9 @@ const props = defineProps({
     }
 });
 
+//emits
+const emits = defineEmits(["closeShow", "deletePizza"]);
+
 //datas
 const pizzaUpdate = ref(false);
 const myPizza = ref(props.pizza);
@@ -21,6 +25,14 @@ const updated = (newPizza) => {
     pizzaUpdate.value = false;
 
     myPizza.value = newPizza;
+}
+
+const deletePizza = async (id) => {
+
+    const data = await axios.delete(`http://localhost:8080/api/pizzas/${id}`);
+
+    emits("deletePizza", ("closeShow", false));
+
 }
 </script>
 
@@ -47,11 +59,14 @@ const updated = (newPizza) => {
 
         <!-- buttons -->
         <div class="my-4 d-flex justify-content-around">
+            <!-- back -->
+            <button @click="$emit('closeShow', myPizza != pizza)" class="btn btn-secondary">Torna alle pizze</button>
+
             <!-- edit -->
             <button @click="pizzaUpdate = true" class="btn btn-warning">Modifica</button>
 
-            <!-- back -->
-            <button @click="$emit('closeShow', myPizza != pizza)" class="btn btn-secondary">Torna alle pizze</button>
+            <!-- delete -->
+            <button @click="deletePizza(myPizza.id)" class="btn btn-danger">Elimina</button>
         </div>
     </div>
 
