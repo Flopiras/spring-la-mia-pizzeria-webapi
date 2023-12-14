@@ -3,7 +3,9 @@
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
 
-import PizzaIndex from './components/PizzaIndex.vue';
+import PizzaIndex from './components/pizzaindex.vue';
+import PizzaShow from './components/PizzaShow.vue';
+
 
 // datas
 const pizzas = ref(null);
@@ -38,6 +40,9 @@ onMounted(getPizzas);
 
     <!-- index -->
     <pizzaIndex v-if="!selectedPizza" :pizzas="pizzas" @show-pizza="showPizza" />
+
+    <!-- show -->
+    <pizzaShow v-if="selectedPizza" :pizza="selectedPizza" />
 
   </div>
 </template>
