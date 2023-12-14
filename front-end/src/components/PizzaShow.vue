@@ -13,6 +13,15 @@ const props = defineProps({
 
 //datas
 const pizzaUpdate = ref(false);
+const myPizza = ref(props.pizza);
+
+//functions
+const updated = (newPizza) => {
+
+    pizzaUpdate.value = false;
+
+    myPizza.value = newPizza;
+}
 </script>
 
 <template>
@@ -43,7 +52,7 @@ const pizzaUpdate = ref(false);
     </div>
 
     <!-- form -->
-    <PizzaForm v-else @back="pizzaUpdate = false" @save="update" />
+    <PizzaForm v-else @back="pizzaUpdate = false" @saved="updated" :oldPizza="pizza" />
 </template>
 
 <style scoped>
